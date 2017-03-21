@@ -23,19 +23,21 @@ Add(Edit,5455505,224,77)
 }
 Add(Label,14680273,28,21)
 {
- Left=120
- Top=30
- Width=93
+ Left=170
+ Top=25
+ Width=53
  Height=17
- Caption="первая страница:"
+ Caption="first page:"
+ Alignment=1
 }
 Add(Label,11859080,28,70)
 {
- Left=105
+ Left=170
  Top=60
- Width=111
+ Width=51
  Height=17
- Caption="последняя страница:"
+ Caption="last page:"
+ Alignment=1
 }
 Add(Edit,10501613,357,84)
 {
@@ -52,14 +54,15 @@ Add(Label,13071499,28,112)
  Top=100
  Width=175
  Height=17
- Caption="Нумерация начинается с номера:"
+ Caption="numbering starts from:"
+ Alignment=1
 }
 Add(Button,15481284,91,189)
 {
  Left=35
  Top=270
  Width=70
- Caption="Выполнить"
+ Caption="Do"
  link(onClick,7014975:doFor,[])
 }
 Add(Button,9054360,21,287)
@@ -67,7 +70,7 @@ Add(Button,9054360,21,287)
  Left=235
  Top=270
  Width=70
- Caption="Выйти"
+ Caption="Exit"
  link(onClick,2953706:doClose,[])
 }
 Add(For,7014975,175,189)
@@ -102,7 +105,7 @@ Add(Memory,3108386,462,84)
 }
 Add(InfoTip,8542666,105,49)
 {
- Info=#11:первая стр.|
+ Info=#10:first page|
  Font=[MS Sans Serif,8,1,0,1]
  Frame=2
  Transparent=1
@@ -111,7 +114,7 @@ Add(InfoTip,8542666,105,49)
 }
 Add(InfoTip,13125892,196,49)
 {
- Info=#10:посл. стр.|
+ Info=#9:last page|
  Font=[MS Sans Serif,8,1,0,1]
  Frame=2
  Transparent=1
@@ -120,7 +123,7 @@ Add(InfoTip,13125892,196,49)
 }
 Add(InfoTip,14183914,329,42)
 {
- Info=#10:нумеровать|9:начиная с|
+ Info=#12:start number|
  Font=[MS Sans Serif,8,1,0,1]
  Frame=2
  Transparent=1
@@ -163,5 +166,5 @@ Add(Button,4112499,238,266)
 {
  Left=145
  Top=270
- Caption="Очистить"
+ Caption="Clear"
 }
