@@ -159,8 +159,9 @@ Add(Button,12117153,518,252)
  Caption=""
  Point(doCaption)
 }
-Add(Button,4112499,140,266)
+Add(Button,4112499,238,266)
 {
  Left=145
  Top=270
+ Caption="Очистить"
 }
