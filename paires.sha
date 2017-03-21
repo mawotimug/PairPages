@@ -4,6 +4,7 @@ Add(MainForm,2953706,119,266)
 {
  Width=359
  Height=356
+ Caption="PairePages"
  Position=1
 }
 Add(Edit,4574181,133,77)
@@ -157,4 +158,9 @@ Add(Button,12117153,518,252)
  Height=130
  Caption=""
  Point(doCaption)
+}
+Add(Button,4112499,140,266)
+{
+ Left=145
+ Top=270
 }
