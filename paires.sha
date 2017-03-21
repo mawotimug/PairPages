@@ -1,0 +1,160 @@
+Make(delphi)
+ver(4.05 build 186)
+Add(MainForm,2953706,119,266)
+{
+ Width=359
+ Height=356
+ Position=1
+}
+Add(Edit,4574181,133,77)
+{
+ Left=230
+ Top=25
+ Name="edit1"
+ Text=""
+}
+Add(Edit,5455505,224,77)
+{
+ Left=230
+ Top=60
+ Name="edit2"
+ Text=""
+}
+Add(Label,14680273,28,21)
+{
+ Left=120
+ Top=30
+ Width=93
+ Height=17
+ Caption="перва€ страница:"
+}
+Add(Label,11859080,28,70)
+{
+ Left=105
+ Top=60
+ Width=111
+ Height=17
+ Caption="последн€€ страница:"
+}
+Add(Edit,10501613,357,84)
+{
+ Left=230
+ Top=95
+ Name="edit3"
+ Text=""
+ link(onChange,11880944:doOperation,[])
+ link(Str,10859268:Result,[(363,10)(501,10)(501,152)(517,152)])
+}
+Add(Label,13071499,28,112)
+{
+ Left=45
+ Top=100
+ Width=175
+ Height=17
+ Caption="Ќумераци€ начинаетс€ с номера:"
+}
+Add(Button,15481284,91,189)
+{
+ Left=35
+ Top=270
+ Width=70
+ Caption="¬ыполнить"
+ link(onClick,7014975:doFor,[])
+}
+Add(Button,9054360,21,287)
+{
+ Left=235
+ Top=270
+ Width=70
+ Caption="¬ыйти"
+ link(onClick,2953706:doClose,[])
+}
+Add(For,7014975,175,189)
+{
+ link(onEvent,11495718:doString,[])
+ link(Start,4574181:Text,[(181,149)(139,149)])
+ link(End,5455505:Text,[(188,149)(230,149)])
+}
+Add(FormatStr,11495718,343,189)
+{
+ DataCount=4
+ Mask="%1 %2='%3-%4'"
+ link(onFString,3202713:doValue,[])
+ link(Str1,3202713:Value,[(349,165)(319,165)(319,232)(405,232)])
+ link(Str2,7014975:Position,[(356,177)(268,177)(268,233)(181,233)])
+ link(Str3,10501613:Text,[])
+ link(Str4,3108386:Value,[(370,153)(468,153)])
+}
+Add(Math,11880944,406,84)
+{
+ ResultType=0
+ link(onResult,3108386:doValue,[])
+ link(Op2,9729831:Value,[])
+}
+Add(Memory,9729831,413,21)
+{
+ Default=Integer(1)
+}
+Add(Memory,3108386,462,84)
+{
+ link(onData,10859268:doOperation,[])
+}
+Add(InfoTip,8542666,105,49)
+{
+ Info=#11:перва€ стр.|
+ Font=[MS Sans Serif,8,1,0,1]
+ Frame=2
+ Transparent=1
+ Width=78
+ Height=18
+}
+Add(InfoTip,13125892,196,49)
+{
+ Info=#10:посл. стр.|
+ Font=[MS Sans Serif,8,1,0,1]
+ Frame=2
+ Transparent=1
+ Width=78
+ Height=18
+}
+Add(InfoTip,14183914,329,42)
+{
+ Info=#10:нумеровать|9:начина€ с|
+ Font=[MS Sans Serif,8,1,0,1]
+ Frame=2
+ Transparent=1
+ Width=78
+}
+Add(Math,10859268,511,84)
+{
+ ResultType=0
+ link(Op2,3014296:Value,[])
+}
+Add(Memory,3014296,518,21)
+{
+ Default=Integer(1)
+}
+Add(Clipboard,32463,518,196)
+{
+}
+Add(Memory,3202713,399,189)
+{
+ Default=String()
+ link(onData,6389053:doEvent1,[])
+}
+Add(Hub,6389053,441,189)
+{
+ OutCount=3
+ link(onEvent1,10501613:doText,[(474,195)(474,143)(345,143)(345,90)])
+ link(onEvent2,32463:doPutText,[])
+ link(onEvent3,12117153:doCaption,[(487,209)(487,258)])
+}
+Add(Button,12117153,518,252)
+{
+ Left=40
+ Top=130
+ Width=265
+ Height=130
+ Caption=""
+ Point(doCaption)
+}
