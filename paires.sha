@@ -4,7 +4,7 @@ Add(MainForm,2953706,119,266)
 {
  Width=359
  Height=356
- Caption="PairePages"
+ Caption="PairPages"
  Position=1
 }
 Add(Edit,4574181,133,77)
