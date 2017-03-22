@@ -45,8 +45,8 @@ Add(Edit,10501613,357,84)
  Top=95
  Name="edit3"
  Text=""
- link(onChange,11880944:doOperation,[])
- link(Str,10859268:Result,[(363,10)(501,10)(501,152)(517,152)])
+ link(onChange,10350853:doCalc,[])
+ link(Str,3246257:Result,[(363,25)(579,25)(579,129)(517,129)])
 }
 Add(Label,13071499,28,112)
 {
@@ -90,19 +90,9 @@ Add(FormatStr,11495718,343,189)
  link(Str3,10501613:Text,[])
  link(Str4,3108386:Value,[(370,153)(468,153)])
 }
-Add(Math,11880944,406,84)
-{
- ResultType=0
- link(onResult,3108386:doValue,[])
- link(Op2,9729831:Value,[])
-}
-Add(Memory,9729831,413,21)
-{
- Default=Integer(1)
-}
 Add(Memory,3108386,462,84)
 {
- link(onData,10859268:doOperation,[])
+ link(onData,3246257:doCalc,[])
 }
 Add(InfoTip,8542666,105,49)
 {
@@ -130,15 +120,6 @@ Add(InfoTip,14183914,329,42)
  Transparent=1
  Width=78
 }
-Add(Math,10859268,511,84)
-{
- ResultType=0
- link(Op2,3014296:Value,[])
-}
-Add(Memory,3014296,518,21)
-{
- Default=Integer(1)
-}
 Add(Clipboard,32463,518,196)
 {
 }
@@ -157,6 +138,12 @@ Add(Message,3378181,518,252)
 {
  link(Message,32463:Text,[])
 }
-Add(MathParse,10350853,217,357)
+Add(MathParse,10350853,406,84)
 {
+ MathStr="%1 + 1"
+ link(onResult,3108386:doValue,[])
+}
+Add(MathParse,3246257,511,84)
+{
+ MathStr="%1 + 1"
 }
