@@ -76,6 +76,7 @@ Add(Button,9054360,21,287)
 Add(For,7014975,175,189)
 {
  link(onEvent,11495718:doString,[])
+ link(onStop,3378181:doMessage,[(297,202)(297,258)])
  link(Start,4574181:Text,[(181,149)(139,149)])
  link(End,5455505:Text,[(188,149)(230,149)])
 }
@@ -151,20 +152,11 @@ Add(Hub,6389053,441,189)
  OutCount=3
  link(onEvent1,10501613:doText,[(474,195)(474,143)(345,143)(345,90)])
  link(onEvent2,32463:doPutText,[])
- link(onEvent3,12117153:doCaption,[(487,209)(487,258)])
 }
-Add(Button,12117153,518,252)
+Add(Message,3378181,518,252)
 {
- Left=40
- Top=130
- Width=265
- Height=130
- Caption=""
- Point(doCaption)
+ link(Message,32463:Text,[])
 }
-Add(Button,4112499,238,266)
+Add(MathParse,10350853,217,357)
 {
- Left=145
- Top=270
- Caption="Clear"
 }
