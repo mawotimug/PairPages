@@ -71,7 +71,7 @@ Add(Button,9054360,21,287)
  Top=270
  Width=70
  Caption="Exit"
- link(onClick,2953706:doClose,[])
+ link(onClick,11848599:doEvent1,[])
 }
 Add(For,7014975,175,189)
 {
@@ -136,6 +136,7 @@ Add(Hub,6389053,441,189)
 }
 Add(Message,3378181,518,252)
 {
+ link(onMessage,11848599:doEvent2,[(560,258)(560,314)(79,314)(79,300)])
  link(Message,32463:Text,[])
 }
 Add(MathParse,10350853,406,84)
@@ -146,4 +147,10 @@ Add(MathParse,10350853,406,84)
 Add(MathParse,3246257,511,84)
 {
  MathStr="%1 + 1"
+}
+Add(Hub,11848599,91,287)
+{
+ InCount=2
+ OutCount=1
+ link(onEvent1,2953706:doClose,[])
 }
